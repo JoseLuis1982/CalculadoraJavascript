@@ -14,23 +14,24 @@ var cont=1;
  
 
  //Asignar Eventos
- document.getElementById('on').onclick = on;
-document.getElementById('1').onclick = Uno;
-document.getElementById('2').onclick = Dos;
-//Funciones Numeros
-function on(){
-	document.getElementById('display').innerHTML=0
-}
-function Uno(){
-	ReducirTamano(btnUno);
-	AgregaNumero(1);	
-}
-function Dos(){
-	AgregaNumero(2);
-}
+// document.getElementById('on').onclick = on;
 
-function AgregaNumero(numero){
-	
+btnOn.addEventListener('click',function(on){
+	document.getElementById('display').innerHTML=0
+})
+btnUno.addEventListener('click',function(uno){
+	ReducirTamano(btnUno);
+	AgregaNumero(1);
+})
+btnDos.addEventListener('click',function(dos){
+	AgregaNumero(2);
+})
+btnTres.addEventListener('click',function(tres){
+	AgregaNumero(3);
+})
+
+
+function AgregaNumero(numero){	
 	if (cont==8){
 		return;
 	}
@@ -43,6 +44,7 @@ function AgregaNumero(numero){
 }
 function ReducirTamano(boton)
 {
-	boton.style.width = "18%";
+	boton.style.width = 40;
+	//boton.style.heigth="90%";
 }
 
