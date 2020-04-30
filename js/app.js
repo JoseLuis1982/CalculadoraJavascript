@@ -136,6 +136,10 @@ btnMasMenos.addEventListener('mousedown',function(ReducirTamano){
 btnOn.addEventListener('click',function(on){
 	cont=1
 	document.getElementById('display').innerHTML=0
+	operador=""
+})
+btnCero.addEventListener('click',function(cero){
+	AgregaNumero(0);
 })
 btnUno.addEventListener('click',function(uno){	
 	AgregaNumero(1);	
@@ -224,5 +228,6 @@ function AgregaNumero(numero){
 		document.getElementById('display').innerHTML = document.getElementById('display').innerHTML + numero;
 		cont=cont+1
 	}
+	
 }
 
